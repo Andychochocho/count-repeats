@@ -15,15 +15,6 @@ namespace CountRepeatProject.Objects
       _word = word;
       _longString = longString;
     }
-// Getters are placed here
-    public string GetWord()
-    {
-      return _word;
-    }
-    public string GetLongString()
-    {
-      return _longString;
-    }
 
     public int CountRepeats()
     {
