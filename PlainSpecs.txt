@@ -1,0 +1,5 @@
+1. Logic should look for if any long strings do not include the word input.
+2. It should then look for both inputs being the same.
+3. After that the logic will see if the word has one instance of that word within the long string.
+4. Once that is checked it will check for multiple matches of that word within the long string.
+5. Finally it will look for if there are multiple cases of that word within the long string that are exact matches.
