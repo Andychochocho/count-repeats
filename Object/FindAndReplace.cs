@@ -27,7 +27,7 @@ namespace CountRepeatProject.Objects
 
     public int CountRepeats()
     {
-      int result = Regex.Matches(_longString, @_word).Count;
+      int result = Regex.Matches(_longString, @"\b" + @_word + @"\b").Count;
 
       if (_word == _longString)
       {
