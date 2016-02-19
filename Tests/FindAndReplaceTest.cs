@@ -22,5 +22,11 @@ namespace CountRepeatProject.Objects
       CountRepeat newCountRepeat = new CountRepeat ("batman", "batman rocks");
       Assert.Equal(newCountRepeat.CountRepeats(), 1);
     }
+    [Fact]
+    public void isWord_forLongStringContainingWordMutipleTimes_3()
+    {
+      CountRepeat newCountRepeat = new CountRepeat ("the", "the hulk is the best at the hulk smash");
+      Assert.Equal(newCountRepeat.CountRepeats(), 3);
+    }
   }
 }
