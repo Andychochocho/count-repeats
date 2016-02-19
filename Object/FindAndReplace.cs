@@ -27,16 +27,8 @@ namespace CountRepeatProject.Objects
 
     public int CountRepeats()
     {
-      int result = Regex.Matches(_longString, @_word).Count;
-
-      if (_word == _longString)
-      {
-        return 1;
-      }
-      else
-      {
-        return result;
-      }
+      int result = Regex.Matches(_longString, @"\b" + @_word + @"\b").Count;
+      return result;
     }
   }
 }

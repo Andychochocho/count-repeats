@@ -28,5 +28,11 @@ namespace CountRepeatProject.Objects
       CountRepeat newCountRepeat = new CountRepeat ("the", "the hulk is the best at the hulk smash");
       Assert.Equal(newCountRepeat.CountRepeats(), 3);
     }
+    [Fact]
+    public void isWord_forLongStringContainingWordMutipleTimesAndOnlyCaseMatches_2()
+    {
+      CountRepeat newCountRepeat = new CountRepeat ("123", "the 123 is super good at123 123ing in order of 1 2 3 123 yeah");
+      Assert.Equal(newCountRepeat.CountRepeats(), 2);
+    }
   }
 }
