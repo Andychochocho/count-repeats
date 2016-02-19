@@ -27,13 +27,15 @@ namespace CountRepeatProject.Objects
 
     public int CountRepeats()
     {
+      int result = Regex.Matches(_longString, @_word).Count;
+
       if (_word == _longString)
       {
         return 1;
       }
       else
       {
-        return 0;
+        return result;
       }
     }
   }

@@ -16,5 +16,11 @@ namespace CountRepeatProject.Objects
       CountRepeat newCountRepeat = new CountRepeat ("superman", "superman");
       Assert.Equal(newCountRepeat.CountRepeats(), 1);
     }
+    [Fact]
+    public void isWord_forLongStringContainingWordOnce_1()
+    {
+      CountRepeat newCountRepeat = new CountRepeat ("batman", "batman rocks");
+      Assert.Equal(newCountRepeat.CountRepeats(), 1);
+    }
   }
 }
