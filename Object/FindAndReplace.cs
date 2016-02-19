@@ -5,12 +5,12 @@ using System.Text.RegularExpressions;
 
 namespace CountRepeatProject.Objects
 {
-  public class CountRepeat
+  public class RepeatCounter
   {
     private string _word;
     private string _longString;
 
-    public CountRepeat(string word, string longString)
+    public RepeatCounter(string word, string longString)
     {
       _word = word;
       _longString = longString;

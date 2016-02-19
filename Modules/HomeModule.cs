@@ -2,7 +2,7 @@ using Nancy;
 using CountRepeatProject.Objects;
 using System.Collections.Generic;
 
-namespace CountReplaceProject
+namespace CountRepeatProject
 {
   public class HomeModule : NancyModule
   {
@@ -10,10 +10,11 @@ namespace CountReplaceProject
     {
 
       Get["/"] = _ => View["index.cshtml"];
-      Post["/output"] = _ =>
+      Post["/results"] = _ =>
       {
-
-        return View["output.cshtml"];
+        RepeatCounter newRepeatCounter = new RepeatCounter(Request.Form["word"], Request.Form["longString"]);
+        int result = newRepeatCounter.CountRepeats();
+        return View["results.cshtml", result];
       };
     }
   }
