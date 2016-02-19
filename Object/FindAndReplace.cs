@@ -27,7 +27,14 @@ namespace CountRepeatProject.Objects
 
     public int CountRepeats()
     {
+      if (_word == _longString)
+      {
+        return 1;
+      }
+      else
+      {
         return 0;
+      }
     }
   }
 }
